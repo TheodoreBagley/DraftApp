@@ -4,12 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <link href="{% static 'draft_app/css/pico.jade.css' %}" rel="stylesheet">
+    <link href="{% static 'draft_app/css/site.css' %}" rel="stylesheet">
     <title>Title</title>
 </head>
-<body>
-<center>
-    <h1><img style="height: 60px" src={% static 'draft_app/img/brain_logo.png' %}> working</h1>
-</center>
 
+<body class="start_screen">
+    <div class="scrolling_container">
+        <div class="scrolling_text text-1">
+            <h2>Welcome to</h2>
+        </div>
+        <div class="scrolling_text text-2">
+            <h1 style="font-size: 3rem">
+                <img style="height: 56px; position: relative; top: -5px" src={% static 'draft_app/img/brain_logo.png' %}>
+                Draft Genius
+            </h1>
+        </div>
+        <div class="scrolling_text text-3">
+            <h3>
+                The Most Powerful League of Legends Drafting Tool
+            </h3>
+        </div>
+    </div>
+    <div class="start_flex_container">
+    <div class="start_flex_item">
+        <p>Click here to start drafting!</p>
+        <img style="height: 30px; position: relative; top: 30px" src="{% static 'draft_app/img/white_down_arrow.png' %}">
+        <button>Button 1</button>
+    </div>
+    <div class="start_flex_item">
+        <p>Click here to learn about the different ways to use this tool!</p>
+        <img style="height: 30px" src="{% static 'draft_app/img/white_down_arrow.png' %}">
+        <button>Button 2</button>
+    </div>
+</div>
 </body>
 </html>
