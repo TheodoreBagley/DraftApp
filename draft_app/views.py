@@ -14,3 +14,7 @@ def draft_screen(request):
 def learn_screen(request):
     template = loader.get_template("draft_app/learn_screen.html")
     return HttpResponse(template.render())
+
+def ban_screen(request):
+    template = loader.get_template("draft_app/learn_bans.html")
+    return HttpResponse(template.render())

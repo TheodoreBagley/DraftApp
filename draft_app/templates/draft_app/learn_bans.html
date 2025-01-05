@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn Screen</title>
+    <title>Ban Screen</title>
     <link href="{% static 'draft_app/css/pico.jade.css' %}" rel="stylesheet">
     <link href="{% static 'draft_app/css/learn_screen.css' %}" rel="stylesheet">
     <script src={% static 'draft_app/js/htmx2.0.3.js' %}></script>
@@ -12,12 +12,7 @@
 <body>
 <div class="tabs-container">
     <div class="tabs">
-        <button class="tab" id="tab1" 
-        hx-get="/learn/ban"
-        hx-trigger="click"
-        hx-target=".tabs-container"
-        hx-swap="outerHTMl"
-        >Ban Suggestions</button>
+        <button class="active_tab" id="tab1">Ban Suggestions</button>
         <button class="tab" id="tab2">Pick Suggestion</button>
         <button class="tab" id="tab3">OP Champs</button>
         <button class="tab" id="tab4">Item Suggestion</button>
@@ -26,15 +21,8 @@
         <button class="tab" id="tab7">Compare Early Game</button>
         <button class="tab" id="tab8">Breakpoints</button>
     </div>
-    <div class="content">
-        <p>Here is what the draft screen looks like:</p>
-        <div>
-            <img style="height: 300px; margin-bottom: 20px" src="{% static 'draft_app/img/draftlol_ss.png' %}">
-        </div>
-        <p style="margin-left: 100px; margin-right: 100px">The base of the Draft Screen is similar to other tools like DraftLOL, where the user can pick champions for each team.
-        What makes Draft Genius different is the tools available in the tabs at the top.</p>
-        <p>When you click one of the tabs a window will pop up and provide information based on what tools is selected!</p>
-        <p>Now click on a tab to learn what they do!</p>
+    <div class="container">
+        hold
     </div>
 </div>
 </body>
