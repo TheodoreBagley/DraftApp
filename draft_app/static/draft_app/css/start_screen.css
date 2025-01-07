@@ -14,44 +14,42 @@ body.start_screen {
 .scrolling_text {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-
-}
-
-.text-1 {
-    bottom: -100px;
+    transform: translate(-50%, 100%);
+    text-align: center;
     animation: scrollUp 2s ease-out forwards;
 }
 
+.text-1 {
+    animation-delay: 0s;
+}
+
 .text-2 {
-    bottom: -200px;
-    animation: scrollUp2 2s ease-out forwards;
     animation-delay: 0.1s;
 }
 
 .text-3 {
-    bottom: -200px;
-    animation: scrollUp3 2s ease-out forwards;
     animation-delay: 0.2s;
 }
 
 .start_flex_container {
     display: flex;
-    gap: 80px;
+    flex-wrap: wrap;
+    gap: 2rem; /* Adjusts dynamically based on font size */
     justify-content: center;
     align-items: flex-start;
+    padding: 2rem 1rem;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
-    animation-fill-mode: forwards;
     animation-delay: 2s;
 }
 
 .start_flex_item {
-    flex: 1;
-    max-width: 300px;
-    height: 250px;
+    flex: 1 1 300px;
+    max-width: 400px;
+    min-width: 250px;
+    height: auto;
     border: 2px solid rgba(0, 166, 110, 0.25);
-    padding: 20px;
+    padding: 1.5rem;
     box-sizing: border-box;
     text-align: center;
     background-color: #0f1114;
@@ -62,41 +60,24 @@ body.start_screen {
 }
 
 .start_flex_item p {
-    margin: 0 0 10px;
+    margin-bottom: 1rem;
     position: relative;
-
 }
 
 .start_flex_item button {
     margin-top: auto;
     cursor: pointer;
     background-color: #00b478;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
 }
 
 @keyframes scrollUp {
     from {
-        bottom: -200px;
+        transform: translate(-50%, 100%);
     }
     to {
-        bottom: 50%;
-    }
-}
-
-@keyframes scrollUp2 {
-    from {
-        bottom: -200px;
-    }
-    to {
-        bottom: 25%;
-    }
-}
-
-@keyframes scrollUp3 {
-    from {
-        bottom: -200px;
-    }
-    to {
-        bottom: 10%;
+        transform: translate(-50%, 0%);
     }
 }
 
@@ -106,5 +87,32 @@ body.start_screen {
     }
     to {
         opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .start_flex_container {
+        gap: 4rem;
+    }
+
+    .start_flex_item {
+        flex: 1 1 350px;
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .scrolling_container {
+        height: 50vh;
+    }
+
+    .start_flex_container {
+        gap: 5rem;
+    }
+
+    .start_flex_item {
+        flex: 1 1 400px;
+        max-width: 600px;
     }
 }
