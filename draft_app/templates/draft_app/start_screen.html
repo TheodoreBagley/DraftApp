@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'draft_app/css/pico.jade.css' %}" rel="stylesheet">
     <link href="{% static 'draft_app/css/start_screen.css' %}" rel="stylesheet">
+    <link href="{% static 'draft_app/css/normalize.css' %}" rel="stylesheet">
     <title>Title</title>
 </head>
 
@@ -28,14 +29,12 @@
     <div class="start_flex_container">
     <div class="start_flex_item">
         <p>Click here to start drafting!</p>
-        <img style="height: 30px; position: relative" src="{% static 'draft_app/img/white_down_arrow.png' %}">
         <form action="/draft" method="get">
             <button>Draft Now!</button>
         </form>
     </div>
     <div class="start_flex_item">
-        <p>Click here to learn about the different ways to use this tool!</p>
-        <img style="height: 30px; position: relative; bottom: 8px" src="{% static 'draft_app/img/white_down_arrow.png' %}">
+        <p>Click here to learn how to use this tool!</p>
         <form action="/learn" method="get">
             <button>Learn How!</button>
         </form>

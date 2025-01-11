@@ -29,6 +29,15 @@
     background-color: #015538;
     font-weight: bold;
     box-shadow: inset 0 0 0 2px #015538;
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    border-right: 2px solid #1d6a54;
+    box-sizing: border-box;
+
 }
 
 .content {
