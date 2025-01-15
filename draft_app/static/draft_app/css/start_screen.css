@@ -13,9 +13,9 @@ body.start_screen {
 
 .scrolling_text {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 .text-1 {
